@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Spell Finder - YouTube Context",
+    "version": "1.4.0",
+    "description": "Find selected words in YouTube video contexts using YouGlish.",
+    "author": "Eugene",
+    "homepage_url": "https://eugene.web-atelier.ru/education/spell-finder.html",
+    "permissions": [
+        "contextMenus",
+        "sidePanel",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "icons": {
+        "16": "assets/logo16.png",
+        "32": "assets/logo32.png",
+        "48": "assets/logo48.png",
+        "96": "assets/logo96.png",
+        "128": "assets/logo128.png",
+        "256": "assets/logo256.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "assets/logo16.png",
+            "32": "assets/logo32.png",
+            "48": "assets/logo48.png",
+            "96": "assets/logo96.png",
+            "128": "assets/logo128.png",
+            "256": "assets/logo256.png"
+        },
+        "default_title": "Open Spell Finder"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://youglish.com https://*.youglish.com; frame-src 'self' https://youglish.com https://*.youglish.com https://www.youtube.com https://*.youtube.com; img-src 'self' https://youglish.com https://*.youglish.com https://i.ytimg.com https://*.ytimg.com data:; style-src 'self' 'unsafe-inline' https://youglish.com https://*.youglish.com;"
+    }
+}
